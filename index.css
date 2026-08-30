@@ -1,0 +1,65 @@
+/* FIX: Make date picker icon visible in light and dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5); /* A gray color for light mode */
+}
+
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* White color for dark mode */
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #e5e7eb; }
+.dark .custom-scrollbar::-webkit-scrollbar-track { background: #374151; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: #9ca3af; border-radius: 10px; }
+.dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #6b7280; }
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+.dark .loader { border: 4px solid #4b5563; border-top: 4px solid #3b82f6; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.drop-zone.drag-over {
+    background-color: #dbeafe; /* blue-100 */
+    border-color: #3b82f6; /* blue-500 */
+}
+.dark .drop-zone.drag-over {
+    background-color: #1e293b; /* slate-800 */
+    border-color: #60a5fa; /* blue-400 */
+}
+/* Notification Bell Animation */
+.notification-active .fa-bell {
+    color: #f59e0b; /* amber-500 */
+    animation: ring 2s ease-in-out infinite;
+}
+@keyframes ring {
+    0%, 100% { transform: rotate(0); }
+    10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+    20%, 40%, 60%, 80% { transform: rotate(10deg); }
+}
+
+/* Toggle Switch */
+.toggle-checkbox {
+  right: 1rem; /* equivalent to right-4 */
+  transition: all 0.2s ease-in-out;
+}
+.toggle-checkbox:checked {
+  right: 0;
+  border-color: #4f46e5; /* Corresponds to indigo-600 */
+}
+.dark .toggle-checkbox:checked {
+  border-color: #6366f1; /* Corresponds to indigo-500 */
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #4f46e5; /* Corresponds to indigo-600 */
+}
+.dark .toggle-checkbox:checked + .toggle-label {
+  background-color: #6366f1; /* Corresponds to indigo-500 */
+}

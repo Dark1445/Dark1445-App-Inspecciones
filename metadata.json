@@ -1,0 +1,5 @@
+{
+  "name": "Tablero de control",
+  "description": "An application to manage and track tool inspections, assign tools to operations, and generate reports. It helps ensure all equipment is up-to-date with its maintenance schedule.",
+  "requestFramePermissions": []
+}
